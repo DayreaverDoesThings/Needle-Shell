@@ -3,8 +3,6 @@ puts "Needle is a project made by DayreaverDoesThings that can do several system
 puts "This program requires Arch Linux!"
 puts "Avalible commands: ls, pwd, sudo pacman -Syu"
 
-system("cd ~")
-
 prompt = gets.chomp
 
 if prompt == "ls"
