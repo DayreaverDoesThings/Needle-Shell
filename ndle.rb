@@ -14,6 +14,7 @@ end
 if prompt == "sudo pacman -Syu"
     system("sudo pacman -Syu")
 end
+# This isn't very effecient. But i dont know how to write it any other way.
 if prompt != "ls" || prompt != "pwd" || prompt != "sudo pacman -Syu"
     puts "invalid prompt, exiting..."
 end
