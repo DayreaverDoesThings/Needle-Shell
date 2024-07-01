@@ -7,6 +7,15 @@ puts "Avalible commands: ls, pwd, sudo pacman -Syu"
 # ask user for a prompt
 prompt = gets.chomp
 
+case prompt
+when 'ls'
+    system("ls")
+else
+    puts("INVALID INPUT!")
+end
+
+exit
+
 # execute "ls" if prompt = "ls"
 if prompt == "ls"
     system("ls")
@@ -19,3 +28,4 @@ end
 if prompt == "sudo pacman -Syu"
     system("sudo pacman -Syu")
 end
+
