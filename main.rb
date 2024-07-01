@@ -6,5 +6,7 @@ def prompt(*args)
     gets.chomp
 end
 
-name = prompt "cmd: "
-name
+cmdPrompt = prompt "cmd: "
+cmdPrompt
+
+
