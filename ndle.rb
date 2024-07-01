@@ -3,14 +3,18 @@ puts "Needle is a project made by DayreaverDoesThings that can do several system
 puts "This program requires Arch Linux!"
 puts "Avalible commands: ls, pwd, sudo pacman -Syu"
 
+# ask user for a prompt
 prompt = gets.chomp
 
+# execute "ls" if prompt = "ls"
 if prompt == "ls"
     system("ls")
 end
+# execute "pwd" if prompt = "pwd"
 if prompt == "pwd"
     system("pwd")
 end
+# execute "sudo pacman -Syu" if prompt = "sudo pacman -Syu"
 if prompt == "sudo pacman -Syu"
     system("sudo pacman -Syu")
 end
