@@ -16,7 +16,7 @@ when 'pwd'
     system("pwd")
 # execute "sudo pacman -Syu" if prompt = "sudo pacman -Syu"
 when 'sudo pacman -Syu'
-    system("sudo pacman -Syu"
+    system("sudo pacman -Syu")
 else
     puts("invalid input")
 end
