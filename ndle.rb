@@ -6,6 +6,7 @@ puts "Avalible commands: ls, pwd, sudo pacman -Syu, exit"
 
 loop do
     # ask user for a prompt
+    print ">"
     prompt = gets.chomp
 
     case prompt
