@@ -1,6 +1,6 @@
 # welcome message
 puts "Needle v1.1"
-puts "Needle is a project made by DayreaverDoesThings that can do several system operations. Yes, i know, you can just type in the console, but this is my first project!"
+puts "Needle is a command shell project made by DayreaverDoesThings that can execute several system operations. 
 puts "This program requires Arch Linux!"
 puts "Avalible commands: ls, pwd, pacman, cd, mkdir, exit"
 
