@@ -1,4 +1,4 @@
-Needle is my first ever coding project. It can execute a couple of system commands. Yes, i know. You can just open Konsole. But what fun is that?
+Needle is my first ever coding project. It is a shell can execute a couple of system commands.
 
 Commands: ls, pwd, pacman, mkdir, cd, exit
 
