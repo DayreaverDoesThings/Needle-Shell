@@ -13,24 +13,38 @@ loop do
     # execute "ls" if prompt = "ls"
     when /^ls/
         system(prompt)
+        puts "running \"ls...\""
     # execute "pwd" if prompt = "pwd"
     when /^pwd/
         system(prompt)
+        puts "running \"pwd...\""
     # execute "pacman" if prompt = "pacman"
     when /pacman/
+        puts "running \"pacman...\""
         system(prompt) 
     # execute "cd" if prompt = "cd" (BROKEN!)
-    when /cd/
-        system(prompt)
+    when /^cd\s+(.+)/
+      dir = $1.strip
+      begin
+        Dir.chdir(dir)
+        puts "Changed directory to #{Dir.pwd}"
+      rescue Errno::ENOENT
+        puts "Directory not found: #{dir}"
+      rescue Errno::EACCES
+        puts "Permission denied: #{dir}"
+      rescue Exception => e
+        puts "Error changing directory: #{e.message}"
+      end
     # execute "mkdir" if prompt = "mkdir"
     when /mkdir/
         system(prompt)
+        puts "running \"ls\"..."
     # exit the program
     when 'exit'
-        puts("exiting needle...")
+        puts "exiting needle..."
         exit
     # invalid input
     else
-        puts("invalid input")
+        puts "invalid input"
     end
 end
