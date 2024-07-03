@@ -38,7 +38,7 @@ loop do
             puts "Error changing directory: #{e.message}"
         end
     # execute "mkdir" if prompt = "mkdir"
-    when /mkdir/
+    when /^mkdir\s+(.+)/
         puts "running \"ls\"..."
         system(prompt)
     # exit the program
