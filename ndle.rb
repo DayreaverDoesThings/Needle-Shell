@@ -12,12 +12,12 @@ loop do
     case prompt
     # execute "ls" if prompt = "ls"
     when /^ls/
-        system(prompt)
         puts "running \"ls...\""
+        system(prompt)
     # execute "pwd" if prompt = "pwd"
     when /^pwd/
-        system(prompt)
         puts "running \"pwd...\""
+        system(prompt)
     # execute "pacman" if prompt = "pacman"
     when /pacman/
         puts "running \"pacman...\""
@@ -37,8 +37,8 @@ loop do
       end
     # execute "mkdir" if prompt = "mkdir"
     when /mkdir/
-        system(prompt)
         puts "running \"ls\"..."
+        system(prompt)
     # exit the program
     when 'exit'
         puts "exiting needle..."
