@@ -3,7 +3,15 @@
 puts "Needle v1.1"
 puts "Needle is a command shell project made by DayreaverDoesThings that can execute several system operations."
 puts "This program requires Arch Linux!"
-puts "Avalible commands: ls, pwd, pacman, cd, mkdir, exit"
+puts "Avalible commands:"
+puts "ls"
+puts "pwd"
+puts "pacman"
+puts "cd"
+puts "mkdir"
+puts "exit"
+puts "help"
+puts "Type \"help\" for another list of commands"
 
 loop do
     # ask user for a prompt
@@ -45,6 +53,18 @@ loop do
     when 'exit'
         puts "exiting needle..."
         exit
+    # help
+    when 'help'
+        puts "showing help..."
+        puts "Avalible commands:"
+        puts "ls"
+        puts "pwd"
+        puts "pacman"
+        puts "cd"
+        puts "mkdir"
+        puts "exit"
+        puts "help"
+        puts "Type \"help\" for another list of commands"
     # invalid input
     else
         puts "invalid input"
