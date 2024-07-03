@@ -1,4 +1,5 @@
 # welcome message
+# please credit when using this please
 puts "Needle v1.1"
 puts "Needle is a command shell project made by DayreaverDoesThings that can execute several system operations."
 puts "This program requires Arch Linux!"
