@@ -15,7 +15,7 @@ puts "Type \"help\" for another list of commands"
 
 loop do
     # ask user for a prompt
-    print ">"
+    print "#{Dir.pwd}>"
     prompt = gets.chomp
 
     case prompt
