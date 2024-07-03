@@ -24,17 +24,18 @@ loop do
         system(prompt) 
     # execute "cd" if prompt = "cd" (BROKEN!)
     when /^cd\s+(.+)/
-      dir = $1.strip
-      begin
-        Dir.chdir(dir)
-        puts "Changed directory to #{Dir.pwd}"
-      rescue Errno::ENOENT
-        puts "Directory not found: #{dir}"
-      rescue Errno::EACCES
-        puts "Permission denied: #{dir}"
-      rescue Exception => e
-        puts "Error changing directory: #{e.message}"
-      end
+        puts "running \"cd...\""
+        dir = $1.strip
+        begin
+            Dir.chdir(dir)
+            puts "Changed directory to #{Dir.pwd}"
+        rescue Errno::ENOENT
+            puts "Directory not found: #{dir}"
+        rescue Errno::EACCES
+            puts "Permission denied: #{dir}"
+        rescue Exception => e
+            puts "Error changing directory: #{e.message}"
+        end
     # execute "mkdir" if prompt = "mkdir"
     when /mkdir/
         puts "running \"ls\"..."
