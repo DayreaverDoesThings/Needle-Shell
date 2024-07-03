@@ -19,10 +19,10 @@ loop do
     # execute "pacman" if prompt = "pacman"
     when /pacman/
         system(prompt) 
-    # execute "cd" if prompt = "cd"
+    # execute "cd" if prompt = "cd" (BROKEN!)
     when /cd/
         system(prompt)
-    # execute "md" if prompt = "md"
+    # execute "mkdir" if prompt = "mkdir"
     when /mkdir/
         system(prompt)
     # exit the program
