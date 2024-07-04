@@ -28,7 +28,7 @@ loop do
         puts "running \"pwd...\""
         system(prompt)
     # execute "pacman" if prompt = "pacman"
-    when /^pacman/
+    when /pacman/
         puts "running \"pacman...\""
         system(prompt) 
     # execute "cd" if prompt = "cd" (BROKEN!)
