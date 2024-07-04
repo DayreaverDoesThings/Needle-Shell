@@ -47,7 +47,7 @@ loop do
         end
     # execute "mkdir" if prompt = "mkdir"
     when /^mkdir\s+(.+)/
-        puts "running \"ls\"..."
+        puts "running \"mkdir\"..."
         system(prompt)
     # exit the program
     when 'exit'
