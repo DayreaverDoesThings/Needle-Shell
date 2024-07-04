@@ -9,6 +9,7 @@ puts "pwd"
 puts "pacman"
 puts "cd"
 puts "mkdir"
+puts "cat"
 puts "exit"
 puts "help"
 puts "Type \"help\" for another list of commands"
@@ -65,6 +66,10 @@ loop do
         puts "exit"
         puts "help"
         puts "Type \"help\" for another list of commands"
+    # execute "cat" if prompt = "cat"
+    when /^cat/
+        puts "running \"cat...\""
+        system(prompt)        
     # invalid input
     else
         puts "invalid input"
