@@ -67,7 +67,7 @@ loop do
         puts "help"
         puts "Type \"help\" for another list of commands"
     # execute "cat" if prompt = "cat"
-    when /^cat/
+    when /cat/
         puts "running \"cat...\""
         system(prompt)        
     # invalid input
