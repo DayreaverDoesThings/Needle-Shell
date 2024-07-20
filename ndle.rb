@@ -38,13 +38,13 @@ loop do
         dir = $1.strip
         begin
             Dir.chdir(dir)
-            puts "Changed directory to #{Dir.pwd}"
+            puts "changed directory to #{Dir.pwd}"
         rescue Errno::ENOENT
-            puts "Directory not found: #{dir}"
+            puts "directory not found: #{dir}"
         rescue Errno::EACCES
-            puts "Permission denied: #{dir}"
+            puts "permission denied: #{dir}"
         rescue Exception => e
-            puts "Error changing directory: #{e.message}"
+            puts "error changing directory: #{e.message}"
         end
     # execute "mkdir" if prompt = "mkdir"
     when /^mkdir\s+(.+)/
