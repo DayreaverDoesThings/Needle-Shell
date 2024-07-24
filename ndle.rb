@@ -1,4 +1,3 @@
-dangermode = 0
 # welcome message
 # please credit when using this please
 puts "Needle v1.1.5"
@@ -75,21 +74,6 @@ loop do
     when /cat/
         puts "running \"cat...\""
         system(prompt)
-    # execute "rm" if prompt = "rm" and dangermode is enabled
-    when /rm/
-        if dangermode == 1
-            puts "running \"rm...\""
-            system(prompt)
-    # enable dangermode
-    when 'dangermode /enable'
-        puts "activating dangermode..."
-        dangermode = 1
-        puts "you should be able to run commands like rm now!"
-    # disable dangermode
-    when 'dangermode /disable'
-        puts "deactivating dangermode..."
-        dangermode = 0
-        puts "you should no longer be able to run commands like rm now!"        
     # invalid input
     else
         puts "invalid input"
