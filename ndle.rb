@@ -66,10 +66,6 @@ loop do
         puts "exit"
         puts "help"
         puts "Type \"help\" for another list of commands"
-    when 'help /dev'
-        puts "showing dev help..."
-        puts "type \"dangermode /enable\" to activate danger mode"
-        puts "type \"dangermode /disable\" to deactivate danger mode"
     # execute "cat" if prompt = "cat"
     when /cat/
         puts "running \"cat...\""
