@@ -1,19 +1,20 @@
 # welcome message
 # please credit when using this please
-puts "Needle v1.1.5"
-puts "Needle is a command shell project made by DayreaverDoesThings that can execute several system operations."
-puts "This program requires Arch Linux!"
-puts "Avalible commands:"
-puts "ls"
-puts "pwd"
-puts "pacman"
-puts "cd"
-puts "mkdir"
-puts "cat"
-puts "exit"
-puts "help"
-puts "Type \"help\" for another list of commands"
 if RUBY_PLATFORM =~ /linux/
+    puts "Needle v1.1.5"
+    puts "Needle is a command shell project made by DayreaverDoesThings that can execute several system operations."
+    puts "This program requires Arch Linux!"
+    puts "Avalible commands:"
+    puts "ls"
+    puts "pwd"
+    puts "pacman"
+    puts "cd"
+    puts "mkdir"
+    puts "cat"
+    puts "exit"
+    puts "help"
+    puts "Type \"help\" for another list of commands"
+
     loop do
         # ask user for a prompt
         print "#{Dir.pwd}>"
