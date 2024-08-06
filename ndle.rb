@@ -33,7 +33,7 @@ if RUBY_PLATFORM =~ /linux/
         when /pacman/
             puts "running \"pacman...\""
             system(prompt) 
-        # execute "cd" if prompt = "cd" (BROKEN!)
+        # execute "cd" if prompt = "cd" 
         when /^cd\s+(.+)/
             puts "running \"cd...\""
             dir = $1.strip
