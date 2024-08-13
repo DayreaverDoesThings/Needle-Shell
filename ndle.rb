@@ -1,10 +1,10 @@
 # welcome message
 # please credit when using this please
 if RUBY_PLATFORM =~ /linux/
-    puts "Needle v1.1.5"
+    puts "Needle v1.2"
     puts "Needle is a command shell project made by DayreaverDoesThings that can execute several system operations."
     puts "This program requires Arch Linux!"
-    puts "Avalible commands:"
+    puts "Available commands:"
     puts "ls"
     puts "pwd"
     puts "pacman"
@@ -21,19 +21,31 @@ if RUBY_PLATFORM =~ /linux/
         prompt = gets.chomp
     
         case prompt
-        # execute "ls" if prompt = "ls"
+        # execute "ls" with error handling
         when /^ls/
             puts "running \"ls...\""
-            system(prompt)
-        # execute "pwd" if prompt = "pwd"
+            begin
+                system(prompt)
+            rescue Exception => e
+                puts "error running ls: #{e.message}"
+            end
+        # execute "pwd" with error handling
         when /^pwd/
             puts "running \"pwd...\""
-            system(prompt)
-        # execute "pacman" if prompt = "pacman"
+            begin
+                system(prompt)
+            rescue Exception => e
+                puts "error running pwd: #{e.message}"
+            end
+        # execute "pacman" with error handling
         when /pacman/
             puts "running \"pacman...\""
-            system(prompt) 
-        # execute "cd" if prompt = "cd" 
+            begin
+                system(prompt)
+            rescue Exception => e
+                puts "error running pacman: #{e.message}"
+            end
+        # execute "cd" with error handling
         when /^cd\s+(.+)/
             puts "running \"cd...\""
             dir = $1.strip
@@ -47,10 +59,22 @@ if RUBY_PLATFORM =~ /linux/
             rescue Exception => e
                 puts "error changing directory: #{e.message}"
             end
-        # execute "mkdir" if prompt = "mkdir"
+        # execute "mkdir" with error handling
         when /^mkdir\s+(.+)/
             puts "running \"mkdir\"..."
-            system(prompt)
+            begin
+                system(prompt)
+            rescue Exception => e
+                puts "error running mkdir: #{e.message}"
+            end
+        # execute "cat" with error handling
+        when /cat/
+            puts "running \"cat...\""
+            begin
+                system(prompt)
+            rescue Exception => e
+                puts "error running cat: #{e.message}"
+            end
         # exit the program
         when 'exit'
             puts "exiting needle..."
@@ -58,7 +82,7 @@ if RUBY_PLATFORM =~ /linux/
         # help
         when 'help'
             puts "showing help..."
-            puts "Avalible commands:"
+            puts "Available commands:"
             puts "ls"
             puts "pwd"
             puts "pacman"
@@ -67,10 +91,6 @@ if RUBY_PLATFORM =~ /linux/
             puts "exit"
             puts "help"
             puts "Type \"help\" for another list of commands"
-        # execute "cat" if prompt = "cat"
-        when /cat/
-            puts "running \"cat...\""
-            system(prompt)
         # invalid input
         else
             puts "invalid input"
