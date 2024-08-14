@@ -6,6 +6,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "This program requires Arch Linux!"
     puts "Available commands:"
     puts "ls"
+    puts "lsblk"
     puts "pwd"
     puts "pacman"
     puts "cd"
@@ -84,6 +85,7 @@ if RUBY_PLATFORM =~ /linux/
             puts "showing help..."
             puts "Available commands:"
             puts "ls"
+            puts "lsblk"
             puts "pwd"
             puts "pacman"
             puts "cd"
@@ -91,6 +93,13 @@ if RUBY_PLATFORM =~ /linux/
             puts "exit"
             puts "help"
             puts "Type \"help\" for another list of commands"
+        when /lsblk/
+            puts "running \"lsblk\""
+            begin
+                system(prompt)
+            rescue Exception => e
+                puts "error running lsblk: #{e.message}"
+            end
         # invalid input
         else
             puts "invalid input"
