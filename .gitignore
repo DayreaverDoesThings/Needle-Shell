@@ -2,4 +2,12 @@
 .class
 .o
 .so
-
+*.swp 
+.DS_Store
+Thumbs.db
+*.pyc
+*.zip
+*.tar.gz
+*.rar
+*.7z
+__pycache__/
