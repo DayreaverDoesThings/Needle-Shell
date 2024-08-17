@@ -100,8 +100,6 @@ if RUBY_PLATFORM =~ /linux/
             puts "exiting the needle shell..."
             logger.info("Session ended at #{Time.now}")
             logger.close
-            puts "Session log:"
-            puts File.read(logfile)  # Display the log contents in the terminal
             exit
         when 'help'
             puts "displaying the list of available commands..."
