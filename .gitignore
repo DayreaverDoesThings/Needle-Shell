@@ -1,0 +1,7 @@
+# git ignore
+.DS_Store
+.log
+.class
+.o
+.so
+
