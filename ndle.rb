@@ -3,7 +3,6 @@ require 'fileutils'
 
 # create logs directory if it doesn't exist
 log_directory = "logs"
-FileUtils.mkdir_p(log_directory) unless Dir.exist?(log_directory)
 
 # initialize logger and store logs in the logs directory
 logfile = File.join(log_directory, 'session.log')
