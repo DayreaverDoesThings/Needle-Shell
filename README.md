@@ -32,7 +32,3 @@ To get Needle up and running on your Arch Linux system, follow these simple step
     - You should now see the Needle prompt, which will allow you to start entering commands.
 
 Needle is open source and highly customizable. Feel free to modify the code, add new commands, or make any changes to suit your needs!
-
----
-
-This more detailed README provides users with a better understanding of what Needle is, how to install it, and how to use it. It also emphasizes the open-source nature of the project, encouraging others to customize and contribute to it.
