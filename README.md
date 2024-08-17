@@ -3,13 +3,16 @@
 **Needle** is my first ever coding project. It’s a simple, customizable command-line shell designed to execute a handful of essential system commands. **Needle** is specifically built for Arch Linux, offering a streamlined way to interact with your system using commands like `ls`, `pwd`, `pacman`, `mkdir`, and `cd`
 
 **Commands:**
+- `help`: Display command list.
 - `ls`: List directory contents.
 - `pwd`: Print the current working directory.
 - `pacman`: Manage packages using the Arch Linux package manager.
 - `mkdir`: Create new directories.
 - `cd`: Change the current directory.
 - `exit`: Exit the Needle shell.
-
+- `exit`: Exit the Needle shell.
+- `cat`: Read or write to folders
+  
 *Note: This shell is intended for use on Arch Linux systems only.*
 
 ## Installation
