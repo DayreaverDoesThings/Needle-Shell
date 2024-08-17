@@ -14,7 +14,7 @@
 
 ## Installation
 
-To get Needle up and running on your Arch Linux system, follow these simple steps:
+To get **Needle** up and running on your Arch Linux system, follow these simple steps:
 
 1. **Install Ruby**: Ensure Ruby is installed on your system. Ruby is the programming language Needle is written in. If Ruby is not already installed, you can download it from the official Ruby website [here](https://www.ruby-lang.org/en/downloads/).
 
