@@ -9,8 +9,7 @@
 - `pacman`: Manage packages using the Arch Linux package manager.
 - `mkdir`: Create new directories.
 - `cd`: Change the current directory.
-- `exit`: Exit the Needle shell.
-- `exit`: Exit the Needle shell.
+- `exit`: Exit the **Needle** shell.
 - `cat`: Read or write to folders.
   
 *Note: This shell is intended for use on Arch Linux systems only.*
@@ -28,7 +27,7 @@ To get **Needle** up and running on your Arch Linux system, follow these simple 
 4. **Run Needle**:
     - Open your terminal application.
     - Use the `cd` command to navigate to the directory where you extracted Needle.
-    - Run the Needle shell by executing the following command:
+    - Run the **Needle** shell by executing the following command:
       ```bash
       ruby ndle.rb
       ```
