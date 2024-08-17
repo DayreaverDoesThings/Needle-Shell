@@ -32,6 +32,8 @@ if RUBY_PLATFORM =~ /linux/
         print "#{Dir.pwd}>"
         prompt = gets.chomp
         logger.info("Command entered: #{prompt}")
+
+        next if prompt.strip.empty?
     
         case prompt
         when /^ls/
