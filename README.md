@@ -1,6 +1,6 @@
 ## About
 
-**Needle** is my first ever coding project. It’s a simple, customizable command-line shell designed to execute a handful of essential system commands. **Needle** is specifically built for Arch Linux, offering a streamlined way to interact with your system using commands like `ls`, `pwd`, `pacman`, `mkdir`, and `cd`
+**Needle** is my first ever coding project. It’s a simple, customizable command-line shell designed to execute a handful of essential system commands. **Needle** is specifically built for Arch Linux, offering a streamlined way to interact with your system using commands like `ls`, `pwd`, `pacman`, `mkdir`, and `cd`.
 
 **Commands:**
 - `help`: Display command list.
