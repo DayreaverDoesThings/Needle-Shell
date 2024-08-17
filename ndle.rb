@@ -1,7 +1,12 @@
 require 'logger'
+require 'fileutils'
 
-# initialize logger
-logfile = 'session.log'
+# create logs directory if it doesn't exist
+log_directory = "logs"
+FileUtils.mkdir_p(log_directory) unless Dir.exist?(log_directory)
+
+# initialize logger and store logs in the logs directory
+logfile = File.join(log_directory, 'session.log')
 logger = Logger.new(logfile)
 
 # log session start
@@ -97,6 +102,8 @@ if RUBY_PLATFORM =~ /linux/
             puts "exiting the needle shell..."
             logger.info("Session ended at #{Time.now}")
             logger.close
+            puts "Session log:"
+            puts File.read(logfile)  # Display the log contents in the terminal
             exit
         when 'help'
             puts "displaying the list of available commands..."
