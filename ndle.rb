@@ -8,7 +8,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "  - ls: list the contents of the current directory"
     puts "  - pwd: print the current working directory"
     puts "  - pacman: manage packages with the arch linux package manager"
-    puts "  - cd: change the current directory (this command has limited functionality)"
+    puts "  - cd: change the current directory"
     puts "  - mkdir: create new directories"
     puts "  - cat: display the contents of a file"
     puts "  - exit: close the needle shell"
@@ -92,7 +92,7 @@ if RUBY_PLATFORM =~ /linux/
             puts "  - help: display this list of commands again"
         # invalid input
         else
-            puts "nvalid input. please enter a valid command or type 'help' to see the list of available commands."
+            puts "invalid input. please enter a valid command or type 'help' to see the list of available commands."
         end
     end
 else
