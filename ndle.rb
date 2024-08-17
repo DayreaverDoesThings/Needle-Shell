@@ -1,19 +1,19 @@
 # welcome message
 # please credit when using this please
 if RUBY_PLATFORM =~ /linux/
-    puts "Needle v1.2"
-    puts "Needle is a command shell project made by DayreaverDoesThings that can execute several system operations."
-    puts "This program requires Arch Linux!"
-    puts "Available commands:"
-    puts "ls"
-    puts "pwd"
-    puts "pacman"
-    puts "cd"
-    puts "mkdir"
-    puts "cat"
-    puts "exit"
-    puts "help"
-    puts "Type \"help\" for another list of commands"
+  puts "needle v1.2"
+    puts "needle is a command shell project created by dayreaverdoesthings. it is designed to execute several system-level operations in a streamlined manner."
+    puts "this shell is specifically made for arch linux!"
+    puts "the following commands are available for use:"
+    puts "  - ls: list the contents of the current directory"
+    puts "  - pwd: print the current working directory"
+    puts "  - pacman: manage packages with the arch linux package manager"
+    puts "  - cd: change the current directory (this command has limited functionality)"
+    puts "  - mkdir: create new directories"
+    puts "  - cat: display the contents of a file"
+    puts "  - exit: close the needle shell"
+    puts "  - help: display this list of commands again"
+    puts "type 'help' to see this list of commands at any time during your session"
 
     loop do
         # ask user for a prompt
@@ -81,22 +81,21 @@ if RUBY_PLATFORM =~ /linux/
             exit
         # help
         when 'help'
-            puts "showing help..."
-            puts "Available commands:"
-            puts "ls"
-            puts "pwd"
-            puts "pacman"
-            puts "cd"
-            puts "mkdir"
-            puts "exit"
-            puts "help"
-            puts "Type \"help\" for another list of commands"
+            puts "displaying the list of available commands..."
+            puts "  - ls: list the contents of the current directory"
+            puts "  - pwd: print the current working directory"
+            puts "  - pacman: manage packages with the arch linux package manager"
+            puts "  - cd: change the current directory"
+            puts "  - mkdir: create new directories"
+            puts "  - cat: display the contents of a file"
+            puts "  - exit: close the needle shell"
+            puts "  - help: display this list of commands again"
         # invalid input
         else
-            puts "invalid input"
+            puts "nvalid input. please enter a valid command or type 'help' to see the list of available commands."
         end
     end
 else
-    puts "This program requires linux, please try again on a linux system."
+    puts "this program requires linux, please try again on a linux system."
     exit
 end
