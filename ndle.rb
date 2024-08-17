@@ -1,5 +1,4 @@
 require 'logger'
-require 'fileutils'
 
 # create logs directory if it doesn't exist
 log_directory = "logs"
