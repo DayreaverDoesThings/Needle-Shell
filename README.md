@@ -21,7 +21,7 @@ To get **Needle** up and running on your Arch Linux system, follow these simple 
 
 1. **Install Ruby**: Ensure Ruby is installed on your system. Ruby is the programming language **Needle** is written in. If Ruby is not already installed, you can download it from the official Ruby website [here](https://www.ruby-lang.org/en/downloads/).
 
-2. **Download Needle**: [Download](https://github.com/DayreaverDoesThings/Needle-Shell/archive/refs/heads/main.zip) the Needle Shell zip file. This zip file contains all the necessary files to run Needle.
+2. **Download Needle**: [Download](https://github.com/DayreaverDoesThings/Needle-Shell/archive/refs/heads/main.zip) the **Needle Shell** zip file. This zip file contains all the necessary files to run Needle.
 
 3. **Extract the Zip File**: Once the download is complete, extract the contents of the zip file to a directory of your choice. This will be the directory where you’ll run **Needle**.
 
