@@ -1,4 +1,4 @@
-### About
+## About
 
 Needle is my first ever coding project. It is a shell can execute a couple of system commands.
 
@@ -6,7 +6,7 @@ Commands: ls, pwd, pacman, mkdir, cd, exit
 
 (THIS IS FOR ARCH LINUX, AND ARCH LINUX ONLY!)
 
-### Installation
+## Installation
 
 1. **Install Ruby**: Make sure Ruby is installed on your system. You can download it [here](https://www.ruby-lang.org/en/downloads/).
 
