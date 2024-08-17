@@ -11,7 +11,7 @@
 - `cd`: Change the current directory.
 - `exit`: Exit the Needle shell.
 - `exit`: Exit the Needle shell.
-- `cat`: Read or write to folders
+- `cat`: Read or write to folders.
   
 *Note: This shell is intended for use on Arch Linux systems only.*
 
