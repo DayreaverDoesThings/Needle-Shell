@@ -5,6 +5,7 @@ require 'fileutils'
 log_directory = "logs"
 
 # initialize logger and store logs in the logs directory
+logfile = File.join(log_directory, 'session.log')
 logger = Logger.new(logfile)
 
 # log session start
