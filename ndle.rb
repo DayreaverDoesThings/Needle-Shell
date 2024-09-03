@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'logger'
 
 # create logs directory if it doesn't exist
