@@ -29,7 +29,7 @@ To get **Needle** up and running on your Arch Linux system, follow these simple 
     - Use the `cd` command to navigate to the directory where you extracted Needle.
     - Run the **Needle** shell by executing the following command:
       ```bash
-      ./needle
+      ./needle.rb
       ```
     - You should now see the **Needle** prompt, which will allow you to start entering commands.
 
