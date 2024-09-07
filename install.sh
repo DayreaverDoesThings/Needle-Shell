@@ -1,4 +1,4 @@
-#!/usr/env bash
+#!/usr/bin/env bash
 
 echo Changing perms...
 chmod +x ndle.rb
