@@ -33,6 +33,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "  - checksum: generate a md5 or sha256 checksum"
     puts "type 'help' to see this list of commands at any time during your session"
 
+    # Start the loop for the shell commands
     loop do
         # prompt the user to enter a command
         print "#{Dir.pwd}>"
@@ -51,6 +52,7 @@ if RUBY_PLATFORM =~ /linux/
                 puts "an error occurred while running ls: #{e.message}"
                 logger.error("Error executing 'ls': #{e.message}")
             end
+
         when /^pwd/
             puts "executing 'pwd' to display the current directory..."
             begin
@@ -60,6 +62,7 @@ if RUBY_PLATFORM =~ /linux/
                 puts "an error occurred while running pwd: #{e.message}"
                 logger.error("Error executing 'pwd': #{e.message}")
             end
+
         when /pacman/
             puts "executing 'pacman' for package management..."
             begin
@@ -69,6 +72,7 @@ if RUBY_PLATFORM =~ /linux/
                 puts "an error occurred while running pacman: #{e.message}"
                 logger.error("Error executing 'pacman': #{e.message}")
             end
+
         when /^cd\s+(.+)/
             puts "attempting to change directory with 'cd'..."
             dir = $1.strip
@@ -86,6 +90,7 @@ if RUBY_PLATFORM =~ /linux/
                 puts "an error occurred while changing directory: #{e.message}"
                 logger.error("Error changing directory: #{e.message}")
             end
+
         when /^mkdir\s+(.+)/
             puts "executing 'mkdir' to create a new directory..."
             begin
@@ -95,6 +100,7 @@ if RUBY_PLATFORM =~ /linux/
                 puts "an error occurred while running mkdir: #{e.message}"
                 logger.error("Error executing 'mkdir': #{e.message}")
             end
+
         when /cat/
             puts "executing 'cat' to display file contents..."
             begin
@@ -104,11 +110,13 @@ if RUBY_PLATFORM =~ /linux/
                 puts "an error occurred while running cat: #{e.message}"
                 logger.error("Error executing 'cat': #{e.message}")
             end
+
         when 'exit'
             puts "exiting the needle shell..."
             logger.info("Session ended at #{Time.now}")
             logger.close
             Kernel.exit(0)
+
         when 'help'
             puts "displaying the list of available commands..."
             logger.info("Displayed help")
@@ -122,9 +130,11 @@ if RUBY_PLATFORM =~ /linux/
             puts "  - help: display this list of commands again"
             puts "  - randomnum: generate a random number"
             puts "  - checksum: generate a md5 or sha256 checksum"
+
         when 'randomnum'
             random_number = SecureRandom.random_number(100)  # Generates a random number between 0 and 99
             puts "Your random number is: #{random_number}"
+
         when /checksum\s+(\w+)\s+(\S+)$/
             algorithm, file_path = $1.downcase, $2
         
@@ -143,10 +153,16 @@ if RUBY_PLATFORM =~ /linux/
             else
               puts "File not found: #{file_path}"
             end
-        end
+
+        else
+            puts "Invalid command. Please enter a valid command or type 'help' to see the list of available commands."
+        end  
+
+    end  
+
 else
     puts "this program requires a linux operating system. please try again on a linux system."
     logger.error("Attempted to run on non-Linux system, Exit code 1 - RUNNING_WINDOWS")
     logger.close
     Kernel.exit(1)
-end
+end 
