@@ -1,0 +1,5 @@
+# Ensure Ruby files are classified as Ruby
+*.rb linguist-language=Ruby
+
+# Ensure Shell scripts are classified as Shell
+*.sh linguist-language=Shell
