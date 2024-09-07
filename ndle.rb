@@ -122,6 +122,19 @@ if RUBY_PLATFORM =~ /linux/
         when 'randomnum'
             random_number = SecureRandom.random_number(100)  # Generates a random number between 0 and 99
             puts "Your random number is: #{random_number}"
+        when /^checksum\s+(\w+)\s+(\S+)$/
+            algorithm, file_path = $1.downcase, $2
+
+            if File.exist?(file_path)
+                file_contents = File.read(file_path)
+                checksum = case algorithim
+                    when 'sha256' then Digest:SHA256.hexdigest(file_contents)
+                    when 'md5' then Digest:SHA256.hexdigest(file_contents)
+                    else
+                        puts "Unsupported algoirthm. Use 'sha256' or 'md5'."
+                        next
+                    end
+            puts "#{algorithim.upcase} checksum for #{file_path}: #{checksum}"
         else
             puts "invalid input. please enter a valid command or type 'help' to see the list of available commands."
             logger.warn("Invalid command entered: #{prompt}")
