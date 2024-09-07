@@ -143,8 +143,6 @@ if RUBY_PLATFORM =~ /linux/
             else
               puts "File not found: #{file_path}"
             end
-        end
-    end
 else
     puts "this program requires a linux operating system. please try again on a linux system."
     logger.error("Attempted to run on non-Linux system, Exit code 1 - RUNNING_WINDOWS")
