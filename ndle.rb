@@ -29,6 +29,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "  - exit: close the needle shell"
     puts "  - help: display this list of commands again"
     puts "  - randomnum: generate a random number"
+    puts "  - checksum: generate a md5 or sha256 checksum"
     puts "type 'help' to see this list of commands at any time during your session"
 
     loop do
@@ -119,6 +120,7 @@ if RUBY_PLATFORM =~ /linux/
             puts "  - exit: close the needle shell"
             puts "  - help: display this list of commands again"
             puts "  - randomnum: generate a random number"
+            puts "  - checksum: generate a md5 or sha256 checksum"
         when 'randomnum'
             random_number = SecureRandom.random_number(100)  # Generates a random number between 0 and 99
             puts "Your random number is: #{random_number}"
