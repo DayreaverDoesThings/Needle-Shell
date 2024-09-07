@@ -15,7 +15,7 @@ logger.info("Session started at #{Time.now}")
 
 # display welcome message with details about the needle shell project
 if RUBY_PLATFORM =~ /linux/
-    puts "needle v1.2"
+    puts "needle v1.2.2"
     logger.info("Needle shell v1.2 started")
     puts "needle is a command shell project created by dayreaverdoesthings. it is designed to execute several system-level operations in a streamlined manner."
     puts "this shell is specifically made for arch linux!"
@@ -28,6 +28,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "  - cat: display the contents of a file"
     puts "  - exit: close the needle shell"
     puts "  - help: display this list of commands again"
+    puts "  - randomnum: generate a random number"
     puts "type 'help' to see this list of commands at any time during your session"
 
     loop do
@@ -117,6 +118,7 @@ if RUBY_PLATFORM =~ /linux/
             puts "  - cat: display the contents of a file"
             puts "  - exit: close the needle shell"
             puts "  - help: display this list of commands again"
+            puts "  - randomnum: generate a random number"
         when 'randomnum'
             random_number = SecureRandom.random_number(100)  # Generates a random number between 0 and 99
             puts "Your random number is: #{random_number}"
