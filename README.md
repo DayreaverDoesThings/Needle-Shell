@@ -24,7 +24,7 @@ To get **Needle** up and running on your Arch Linux system, follow these simple 
 
 3. **Extract the Zip File**: Once the download is complete, extract the contents of the zip file to a directory of your choice. This will be the directory where you’ll run **Needle**.
 
-4. **Make Needle Needle Executable**:
+4. **Make Needle Executable**:
     - Open your terminal application.
     - Use the `cd` command to navigate to the directory where you extracted Needle.
     - Make the **Needle** shell executable by executing the following command:
