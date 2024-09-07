@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'logger'
+require 'securerandom'
 
 # create logs directory if it doesn't exist
 log_directory = "logs"
@@ -116,6 +117,9 @@ if RUBY_PLATFORM =~ /linux/
             puts "  - cat: display the contents of a file"
             puts "  - exit: close the needle shell"
             puts "  - help: display this list of commands again"
+        when 'randomnum'
+            random_number = SecureRandom.random_number(100)  # Generates a random number between 0 and 99
+            puts "Your random number is: #{random_number}"
         else
             puts "invalid input. please enter a valid command or type 'help' to see the list of available commands."
             logger.warn("Invalid command entered: #{prompt}")
