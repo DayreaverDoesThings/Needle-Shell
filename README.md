@@ -24,19 +24,19 @@ To get **Needle** up and running on your Arch Linux system, follow these simple 
 
 3. **Extract the Zip File**: Once the download is complete, extract the contents of the zip file to a directory of your choice. This will be the directory where you’ll run **Needle**.
 
-4. **Make Needle Executable**:
+4. **Run the Install Script**:
     - Open your terminal application.
-    - Use the `cd` command to navigate to the directory where you extracted Needle.
-    - Make the **Needle** shell executable by executing the following command:
+    - Use the `cd` command to navigate to the directory where you extracted **Needle**.
+    - Run the installation script by executing:
       ```bash
-      chmod +x ndle.rb
+      ./install.sh
       ```
+    - The script will:
+        - Run `chmod +x ndle.rb` to make **Needle** executable.
+        - Automatically launch **Needle** by executing `./ndle.rb`.
 
-5. **Run Needle**:
-    - Run the **Needle** shell by executing the following command:
-      ```bash
-      ./ndle.rb
-      ```
-    - You should now see the **Needle** prompt, which will allow you to start entering commands.
+    - After this, you’ll see the **Needle** prompt, and you can start entering commands.
 
 **Needle** is open source and highly customizable. Feel free to modify the code, add new commands, or make any changes to suit your needs!
+
+
