@@ -104,7 +104,7 @@ if RUBY_PLATFORM =~ /linux/
             puts "exiting the needle shell..."
             logger.info("Session ended at #{Time.now}")
             logger.close
-            exit(0)
+            Kernel.exit(0)
         when 'help'
             puts "displaying the list of available commands..."
             logger.info("Displayed help")
