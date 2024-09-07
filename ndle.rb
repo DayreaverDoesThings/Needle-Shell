@@ -2,6 +2,7 @@
 
 require 'logger'
 require 'securerandom'
+require 'digest'
 
 # create logs directory if it doesn't exist
 log_directory = "logs"
