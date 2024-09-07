@@ -123,7 +123,7 @@ if RUBY_PLATFORM =~ /linux/
     end
 else
     puts "this program requires a linux operating system. please try again on a linux system."
-    logger.error("Attempted to run on non-Linux system")
+    logger.error("Attempted to run on non-Linux system, Error code 1")
     logger.close
-    exit
+    exit(1)
 end
