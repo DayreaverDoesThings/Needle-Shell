@@ -1,5 +1,3 @@
 source 'https://rubygems.org'
-gem 'securerandom'
-gem 'digest'
 gem 'rubocop'
 gem 'rainbow'
