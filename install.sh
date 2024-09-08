@@ -39,5 +39,3 @@ ruby -v
 
 echo "Running 'ndle.rb'..."
 ./ndle.rb
-
-echo "Installation complete."
