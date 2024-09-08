@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    digest (3.1.0)
+    logger (1.0.0)
+    rainbow (3.2.0)
+    rubocop (1.0.0)
+      rainbow (~> 3.0)
+    securerandom (0.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  digest
+  logger
+  rainbow
+  rubocop
+  securerandom
+
+BUNDLED WITH
+   2.2.16
