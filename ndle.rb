@@ -25,7 +25,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "  - ls: list the contents of the current directory"
     puts "  - pwd: print the current working directory"
     puts "  - pacman: manage packages with the arch linux package manager"
-    puts "  - cd: change the current directory (this command has limited functionality)"
+    puts "  - cd: change the current directory"
     puts "  - mkdir: create new directories"
     puts "  - cat: display the contents of a file"
     puts "  - exit: close the needle shell"
