@@ -11,3 +11,6 @@ Thumbs.db
 *.rar
 *.7z
 __pycache__/
+*.sublime-workspace
+*.sublime-project
+*.rbc
