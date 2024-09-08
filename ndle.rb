@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require 'rainbow'
 require 'logger'
 require 'securerandom'
 require 'digest'
@@ -49,7 +50,7 @@ if RUBY_PLATFORM =~ /linux/
                 system(prompt)
                 logger.info("Executed 'ls' successfully")
             rescue Exception => e
-                puts "an error occurred while running ls: #{e.message}"
+                puts Rainbow("an error occurred while running ls: #{e.message}").red.bold
                 logger.error("Error executing 'ls': #{e.message}")
             end
 
@@ -59,7 +60,7 @@ if RUBY_PLATFORM =~ /linux/
                 system(prompt)
                 logger.info("Executed 'pwd' successfully")
             rescue Exception => e
-                puts "an error occurred while running pwd: #{e.message}"
+                puts Rainbow("an error occurred while running pwd: #{e.message}").red.bold
                 logger.error("Error executing 'pwd': #{e.message}")
             end
 
@@ -69,7 +70,7 @@ if RUBY_PLATFORM =~ /linux/
                 system(prompt)
                 logger.info("Executed 'pacman' successfully")
             rescue Exception => e
-                puts "an error occurred while running pacman: #{e.message}"
+                puts Rainbow("an error occurred while running pacman: #{e.message}").red.bold
                 logger.error("Error executing 'pacman': #{e.message}")
             end
 
@@ -81,13 +82,13 @@ if RUBY_PLATFORM =~ /linux/
                 puts "successfully changed directory to #{Dir.pwd}"
                 logger.info("Changed directory to #{Dir.pwd}")
             rescue Errno::ENOENT
-                puts "error: directory not found - #{dir}"
+                puts Rainbow("error: directory not found - #{dir}").red.bold
                 logger.error("Directory not found: #{dir}")
             rescue Errno::EACCES
-                puts "error: permission denied - #{dir}"
+                puts Rainbow("error: permission denied - #{dir}").red.bold
                 logger.error("Permission denied: #{dir}")
             rescue Exception => e
-                puts "an error occurred while changing directory: #{e.message}"
+                puts Rainbow("an error occurred while changing directory: #{e.message}").red.bold
                 logger.error("Error changing directory: #{e.message}")
             end
 
@@ -97,7 +98,7 @@ if RUBY_PLATFORM =~ /linux/
                 system(prompt)
                 logger.info("Executed 'mkdir' successfully")
             rescue Exception => e
-                puts "an error occurred while running mkdir: #{e.message}"
+                puts Rainbow("an error occurred while running mkdir: #{e.message}").red.bold
                 logger.error("Error executing 'mkdir': #{e.message}")
             end
 
@@ -107,7 +108,7 @@ if RUBY_PLATFORM =~ /linux/
                 system(prompt)
                 logger.info("Executed 'cat' successfully")
             rescue Exception => e
-                puts "an error occurred while running cat: #{e.message}"
+                puts Rainbow("an error occurred while running cat: #{e.message}").red.bold
                 logger.error("Error executing 'cat': #{e.message}")
             end
 
@@ -145,17 +146,17 @@ if RUBY_PLATFORM =~ /linux/
                          when 'sha256' then Digest::SHA256.hexdigest(file_contents)
                          when 'md5' then Digest::MD5.hexdigest(file_contents)
                          else
-                           puts "Unsupported algorithm. Use 'sha256' or 'md5'."
+                           puts Rainbow("Unsupported algorithm. Use 'sha256' or 'md5'.").red.bold
                            next
                          end
         
               puts "#{algorithm.upcase} checksum for #{file_path}: #{checksum}"
             else
-              puts "File not found: #{file_path}"
+              puts Rainbow("File not found: #{file_path}").red.bold
             end
 
         else
-            puts "Invalid command. Please enter a valid command or type 'help' to see the list of available commands."
+            puts Rainbow("Invalid command. Please enter a valid command or type 'help' to see the list of available commands.").yellow.bold
         end  
 
     end  
