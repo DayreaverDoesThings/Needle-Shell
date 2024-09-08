@@ -11,6 +11,8 @@
 - `cd`: Change the current directory.
 - `exit`: Exit the **Needle** shell.
 - `cat`: Read or write to folders.
+- `randomnum`: Random number generator.
+- `checksum`: Generate a checksum
   
 *Note: This shell is intended for use on Arch Linux systems only.*
 
