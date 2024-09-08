@@ -33,9 +33,6 @@ To get **Needle** up and running on your Arch Linux system, follow these simple 
       ```bash
       ./install.sh
       ```
-    - The script will:
-        - Run `chmod +x ndle.rb` to make **Needle** executable.
-        - Automatically launch **Needle** by executing `./ndle.rb`.
 
     - After this, you’ll see the **Needle** prompt, and you can start entering commands.
 
