@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd src
+
 set -e
 
 check_pacman() {
