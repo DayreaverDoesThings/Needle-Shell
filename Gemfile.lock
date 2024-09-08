@@ -1,10 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    digest (3.1.0)
-    logger (1.0.0)
-    rainbow (3.2.0)
-    rubocop (1.0.0)
+    digest (3.1.1)
+    logger (1.5.1)
+    rainbow (3.1.1)
+    rubocop (1.66.1)
       rainbow (~> 3.0)
     securerandom (0.1.0)
 
