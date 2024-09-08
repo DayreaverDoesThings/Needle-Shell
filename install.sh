@@ -2,6 +2,15 @@
 
 set -e
 
+check_pacman() {
+    if ! command -v pacman &> /dev/null; then
+      echo "Pacman is not found. This script is intended for Arch-based systems."
+      exit 1
+    else
+      echo "Pacman is OK."
+    fi
+}
+
 check_ruby() {
     if ! command -v ruby &> /dev/null; then
       echo "Ruby is not installed. Installing Ruby..."
@@ -25,6 +34,7 @@ if [ ! -f "Gemfile" ]; then
     exit 1
 fi
 
+check_pacman
 check_ruby
 check_bundle
 
