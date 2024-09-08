@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ ! -d "src" ]; then
+    echo "Error: 'src/' directory not found."
+    exit 1
+fi
+
 cd src
 
 set -e
