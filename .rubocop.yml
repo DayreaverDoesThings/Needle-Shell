@@ -1,2 +1,6 @@
 Layout/IndentationWidth:
   Width: 4
+
+Allcops"
+  Exclude:
+    - 'logs/**/*'
