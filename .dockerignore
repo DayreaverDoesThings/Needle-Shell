@@ -1,0 +1,11 @@
+.git
+.gitignore
+.gitattributes
+.gitkeep
+/.github/
+
+/logs/
+*.log
+
+.DS_store
+Thumbs.db
