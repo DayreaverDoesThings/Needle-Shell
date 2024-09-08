@@ -22,10 +22,10 @@ check_ruby() {
 
 check_bundle() {
     if ! command -v bundle &> /dev/null; then
-        echo "Bundler is not installed. Installing Bundler..."
-        gem install bundler
+        echo "Bundler 2.5.11 is not installed. Installing Bundler..."
+        gem install bundler -v 2.5.11
     else
-        echo "Bundler is OK."
+        echo "Bundler 2.5.11 is OK."
     fi
 }
 
