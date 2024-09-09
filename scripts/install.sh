@@ -1,29 +1,29 @@
 #!/usr/bin/env bash
 
+cd "$(dirname "$0")/.."
+
 if [ ! -d "src" ]; then
     echo "Error: 'src/' directory not found."
     exit 1
 fi
 
-cd src
-
 set -e
 
 check_pacman() {
     if ! command -v pacman &> /dev/null; then
-      echo "Pacman is not found. This script is intended for Arch-based systems."
-      exit 1
+        echo "Pacman is not found. This script is intended for Arch-based systems."
+        exit 1
     else
-      echo "Pacman is OK."
+        echo "Pacman is OK."
     fi
 }
 
 check_ruby() {
     if ! command -v ruby &> /dev/null; then
-      echo "Ruby is not installed. Installing Ruby..."
-      sudo pacman -S --noconfirm ruby
+        echo "Ruby is not installed. Installing Ruby..."
+        sudo pacman -S --noconfirm ruby
     else
-      echo "Ruby is OK."
+        echo "Ruby is OK."
     fi         
 }
 
@@ -44,7 +44,7 @@ check_bundle() {
 }
 
 if [ ! -f "Gemfile" ]; then
-    echo "Error: 'Gemfile' not found in the current directory."
+    echo "Error: 'Gemfile' not found in the project root directory."
     exit 1
 fi
 
@@ -59,7 +59,14 @@ check_bundle
 echo "Installing Ruby gems..."
 bundle install
 
-echo "Changing permissions..."
+cd src
+
+if [ ! -f "ndle.rb" ]; then
+    echo "Error: 'ndle.rb' not found in 'src/' directory."
+    exit 1
+fi
+
+echo "Changing permissions for 'ndle.rb'..."
 if ! chmod +x ndle.rb; then
     echo "Error: Failed to change permissions for 'ndle.rb'."
     exit 1
