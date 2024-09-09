@@ -19,7 +19,7 @@ A code of conduct is intended to make open source communities welcoming and incl
 
 ## Reporting Issues
 
-If you experience or witness unacceptable behavior, please contact the project maintainers at [contact@example.com]. We are committed to addressing concerns promptly.
+As the sole maintainer of this project, I am responsible for addressing any issues related to unacceptable behavior. If you experience or witness behavior that violates this Code of Conduct, please report it through the repository's issue tracker.
 
 ## Attribution
 
