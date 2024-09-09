@@ -1,0 +1,32 @@
+{\rtf1\ansi\deff0
+{\b Needle Shell v1.2.2 - technical details}
+
+{\b project overview:}
+Needle Shell is a lightweight command-line shell implemented in Ruby and designed for Arch Linux. the main focus of the project is to execute common system-level commands while logging user activity and providing useful functionality like random number generation and checksum calculation.
+
+{\b project structure:}
+{\b src/}
+- {\b ndle.rb}: main Ruby shell file that defines the functionality of Needle.
+- {\b logs/}: contains session log files to track command execution.
+
+{\b code breakdown:}
+{\b ndle.rb} uses standard Ruby libraries like:
+- {\b Logger}: to track session activity and log errors.
+- {\b SecureRandom}: for generating random numbers.
+- {\b Digest}: for creating checksums (MD5, SHA256).
+
+{\b shell commands execution:}
+- {\b system(prompt)}: executes system commands like {\b ls}, {\b pwd}, and {\b pacman}.
+- {\b Dir.chdir(dir)}: changes the current directory with the {\b cd} command.
+
+{\b error handling:}
+the shell catches and logs errors for each command executed, providing error messages using the {\b Rainbow} gem for colorized output. all errors are logged in {\b logs/session.log}.
+
+{\b checksum functionality:}
+Needle supports checksum generation for both MD5 and SHA256 algorithms, providing an easy way for users to verify file integrity:
+{\b checksum md5 <file>} 
+{\b checksum sha256 <file>} 
+this will generate the appropriate checksum for the specified file.
+
+}
+
