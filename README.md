@@ -29,6 +29,7 @@ To get **Needle** up and running on your Arch Linux system, follow these simple 
 4. **Run the Install Script**:
     - Open your terminal application.
     - Use the `cd` command to navigate to the directory where you extracted **Needle**.
+    - Use to `cd` command to go to the scripts/ directory.
     - Run the installation script by executing:
       ```bash
       ./install.sh
