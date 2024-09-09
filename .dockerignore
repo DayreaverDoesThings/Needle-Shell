@@ -1,7 +1,6 @@
 .git
 .gitignore
 .gitattributes
-.gitkeep
 /.github/
 
 /logs/
