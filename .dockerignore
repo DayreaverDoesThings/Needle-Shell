@@ -7,5 +7,5 @@
 /logs/
 *.log
 
-.DS_store
+.DS_Store
 Thumbs.db
