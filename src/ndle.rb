@@ -133,7 +133,7 @@ if RUBY_PLATFORM =~ /linux/
             puts "  - checksum: generate a md5 or sha256 checksum"
 
         when 'randomnum'
-            random_number = SecureRandom.random_number(100)  # Generates a random number between 0 and 99
+            random_number = SecureRandom.random_number(100)
             puts "Your random number is: #{random_number}"
 
         when /checksum\s+(\w+)\s+(\S+)$/
