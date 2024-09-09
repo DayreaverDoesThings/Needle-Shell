@@ -163,7 +163,7 @@ if RUBY_PLATFORM =~ /linux/
 
 else
     puts Rainbow("this program requires a linux operating system. please try again on a linux system.").color(88).bold
-    logger.error("Attempted to run on non-Linux system, Exit code 1 - RUNNING_WINDOWS")
+    logger.error("Attempted to run on non-Linux system, Exit code 1 - RUNNING_DIFF_OP_SYS")
     logger.close
     Kernel.exit(1)
 end 
