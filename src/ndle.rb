@@ -34,7 +34,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "  - checksum: generate a md5 or sha256 checksum"
     puts "type 'help' to see this list of commands at any time during your session"
 
-    # Start the loop for the shell commands
+    # start the loop for the shell commands
     loop do
         # prompt the user to enter a command
         print "#{Dir.pwd}>"
