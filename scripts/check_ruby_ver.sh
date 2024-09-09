@@ -11,4 +11,4 @@ if ! command -v make &> /dev/null; then
   exit 1
 fi
 
-make -f rbcheck "$@"
+make
