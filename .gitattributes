@@ -4,6 +4,6 @@
 # Ensure Shell scripts are classified as Shell
 *.sh linguist-language=Shell
 
-# Ensure Shell scripts are classified as Shell
+# Ensure Rich text format is classified the correct way
 *.rtf linguist-language=Rich Text Format
 
