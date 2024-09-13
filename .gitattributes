@@ -3,3 +3,7 @@
 
 # Ensure Shell scripts are classified as Shell
 *.sh linguist-language=Shell
+
+# Ensure Shell scripts are classified as Shell
+*.rtf linguist-language=Rich Text Format
+
