@@ -4,6 +4,5 @@ Layout/IndentationWidth:
 AllCops:
   Exclude:
     - 'logs/**/*'
-    - 'doc/**/*'
   TargetRubyVersion: 2.7
   
