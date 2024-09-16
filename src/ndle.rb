@@ -1,21 +1,57 @@
 #!/usr/bin/env ruby
 
+# Needle Command Shell v1.2
+
+# MIT License
+
+# Copyright (c) 2024 [Dayreaver]
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# use rainbow for errors and warnings
 require 'rainbow'
+
+# logger to log sessions
 require 'logger'
+
+# for cmd 'randomnum'
 require 'securerandom'
+
+# for cmd 'checksum'
 require 'digest'
 
-# create logs directory if it doesn't exist
-log_directory = "logs"
+# define variables for logger
 
-# initialize logger and store logs in the logs directory
-logfile = File.join(log_directory, 'session.log')
-logger = Logger.new(logfile)
+log_dir = "logs"
+log_file = "session.log"
+log_path = File.join(log_dir, log_path)
 
-# log session start
+# failsafe if the log folder dosent exist
+Dir.mkdir(log_dir) unless Dir.exist?(log_dir)
+
+# initialize logger
+logger = Logger.new(log_path)
+
+# logger session start
 logger.info("Session started at #{Time.now}")
 
-# display welcome message with details about the needle shell project
+# display welcome message
 if RUBY_PLATFORM =~ /linux/
     puts "needle v1.2.2"
     logger.info("Needle shell v1.2 started")
@@ -34,7 +70,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "  - checksum: generate a md5 or sha256 checksum"
     puts "type 'help' to see this list of commands at any time during your session"
 
-    # start the loop for the shell commands
+    # start a loop for command entry
     loop do
         # prompt the user to enter a command
         print "#{Dir.pwd}>"
@@ -167,3 +203,4 @@ else
     logger.close
     Kernel.exit(1)
 end 
+
