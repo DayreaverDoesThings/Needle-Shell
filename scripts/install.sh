@@ -20,7 +20,7 @@ check_pacman() {
 
 check_ruby() {
     if ! command -v ruby &> /dev/null; then
-        echo "ruby is not installed. Installing Ruby..."
+        echo "ruby is not installed. installing Ruby..."
         sudo pacman -S --noconfirm ruby
     else
         echo "ruby is OK."
