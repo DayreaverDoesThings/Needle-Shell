@@ -146,8 +146,8 @@ if RUBY_PLATFORM =~ /linux/
 
         when 'help'
             puts "displaying the list of available commands..."
-            logger.info("Displayed help")
             display_help
+            logger.info("Displayed help")
 
         when 'randomnum'
             random_number = SecureRandom.random_number(100)
