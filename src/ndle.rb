@@ -188,11 +188,11 @@ if RUBY_PLATFORM =~ /linux/
         
               puts "#{algorithm.upcase} checksum for #{file_path}: #{checksum}"
             else
-              puts Rainbow("File not found: #{file_path}").red.bold
+              puts Rainbow("file not found: #{file_path}").red.bold
             end
 
         else
-            puts Rainbow("Invalid command. Please enter a valid command or type 'help' to see the list of available commands.").yellow.bold
+            puts Rainbow("invalid command. Please enter a valid command or type 'help' to see the list of available commands.").yellow.bold
         end  
 
     end  
