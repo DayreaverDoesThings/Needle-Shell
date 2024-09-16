@@ -202,5 +202,4 @@ else
     logger.error("Attempted to run on non-Linux system, Exit code 1 - RUNNING_DIFF_OP_SYS")
     logger.close
     Kernel.exit(1)
-end 
-
+end
