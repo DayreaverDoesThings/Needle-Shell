@@ -36,6 +36,9 @@ require 'securerandom'
 # for cmd 'checksum'
 require 'digest'
 
+# require shell logic
+require_relative 'shell_logic.rb'
+
 # define variables for logger
 
 log_dir = "logs"
@@ -58,17 +61,7 @@ if RUBY_PLATFORM =~ /linux/
     puts "needle is a command shell project created by dayreaverdoesthings. it is designed to execute several system-level operations in a streamlined manner."
     puts "this shell is specifically made for arch linux!"
     puts "the following commands are available for use:"
-    puts "  - ls: list the contents of the current directory"
-    puts "  - pwd: print the current working directory"
-    puts "  - pacman: manage packages with the arch linux package manager"
-    puts "  - cd: change the current directory"
-    puts "  - mkdir: create new directories"
-    puts "  - cat: display the contents of a file"
-    puts "  - exit: close the needle shell"
-    puts "  - help: display this list of commands again"
-    puts "  - randomnum: generate a random number"
-    puts "  - checksum: generate a md5 or sha256 checksum"
-    puts "type 'help' to see this list of commands at any time during your session"
+    display_help
 
     # start a loop for command entry
     loop do
@@ -149,24 +142,12 @@ if RUBY_PLATFORM =~ /linux/
             end
 
         when 'exit'
-            puts "exiting the needle shell..."
-            logger.info("Session ended at #{Time.now}")
-            logger.close
-            Kernel.exit(0)
+            exit_shell(logger)
 
         when 'help'
             puts "displaying the list of available commands..."
             logger.info("Displayed help")
-            puts "  - ls: list the contents of the current directory"
-            puts "  - pwd: print the current working directory"
-            puts "  - pacman: manage packages with the arch linux package manager"
-            puts "  - cd: change the current directory"
-            puts "  - mkdir: create new directories"
-            puts "  - cat: display the contents of a file"
-            puts "  - exit: close the needle shell"
-            puts "  - help: display this list of commands again"
-            puts "  - randomnum: generate a random number"
-            puts "  - checksum: generate a md5 or sha256 checksum"
+            display_help
 
         when 'randomnum'
             random_number = SecureRandom.random_number(100)
