@@ -11,7 +11,7 @@ set -e
 
 check_pacman() {
     if ! command -v pacman &> /dev/null; then
-        echo "pacman was not found. This script is intended for Arch-based systems."
+        echo "pacman was not found. this script is intended for Arch-based systems."
         exit 1
     else
         echo "pacman is OK."
