@@ -40,7 +40,7 @@ require 'digest'
 
 log_dir = "logs"
 log_file = "session.log"
-log_path = File.join(log_dir, log_path)
+log_path = File.join(log_dir, log_file)
 
 # failsafe if the log folder dosent exist
 Dir.mkdir(log_dir) unless Dir.exist?(log_dir)
