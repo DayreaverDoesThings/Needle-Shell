@@ -1,4 +1,5 @@
-# git ignore
+# Gitignore
+
 .class
 .o
 .so
@@ -14,3 +15,6 @@ __pycache__/
 *.sublime-workspace
 *.sublime-project
 *.rbc
+*.tar.bz2
+*.rar
+*.tmp
