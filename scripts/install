@@ -61,22 +61,22 @@ bundle install
 
 cd src
 
-if [ ! -f "ndle.rb" ]; then
-    echo "Error: 'ndle.rb' not found in 'src/' directory."
+if [ ! -f "ndle" ]; then
+    echo "Error: 'ndle' not found in 'src/' directory."
     exit 1
 fi
 
-echo "changing permissions for 'ndle.rb'..."
-if ! chmod +x ndle.rb; then
-    echo "error: Failed to change permissions for 'ndle.rb'."
+echo "changing permissions for 'ndle'..."
+if ! chmod +x ndle; then
+    echo "error: Failed to change permissions for 'ndle'."
     exit 1
 fi
 
 echo "current Ruby version:"
 ruby -v
 
-echo "running 'ndle.rb'..."
-if ! ./ndle.rb; then
-    echo "error: 'ndle.rb' failed to execute."
+echo "running 'ndle'..."
+if ! ./ndle; then
+    echo "error: 'ndle' failed to execute."
     exit 1
 fi
