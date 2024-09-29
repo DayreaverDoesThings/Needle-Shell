@@ -1,12 +1,10 @@
 # GitIgnore for Git Version Control
 
-# Compiled Object Files
 *.class        # Java bytecode
 *.o            # C/C++ object files
 *.so           # Shared objects (Linux)
 *.rbc          # Compiled Ruby files
 
-# Temporary Files
 *.tmp          # Temporary files
 *.swp          # Swap files
 *.pyc          # Compiled Python files
@@ -16,28 +14,24 @@
 *.7z           # 7zip files
 *.tar.bz2      # Tarballs (bz2 compression)
 
-# Cache Files
 __pycache__/   # Python bytecode cache
 
-# Editor & IDE Files
 *.sublime-workspace   # Sublime Text workspace
 *.sublime-project     # Sublime Text project
 *.vscode/             # VSCode settings
 .idea/                # IntelliJ IDEA settings
 
-# System Files
 .DS_Store    # macOS directory metadata
 Thumbs.db    # Windows image thumbnail cache
 
-# Archives
 *.gz         # General compressed files
 *.tar.xz     # Compressed archives with xz
 *.tar        # Uncompressed tarballs
 
-# Other Common Patterns
 *.bak        # Backup files
 node_modules/  # Node.js dependencies
 .env         # Environment variable files
 
-# Ignore by filename
 database.sqlite # SQLite database files
+config.yaml # Config that shouldnt be versioned
+config.yml # Ditto
